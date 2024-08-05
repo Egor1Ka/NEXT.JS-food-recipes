@@ -3,17 +3,7 @@
 import React from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { Tag } from '../Tag'
-
-interface Recipe {
-    image: string
-    tags: string[]
-    title: string
-    ingredients: string[]
-    difficulty: 'Easy' | 'Medium' | 'Hard'
-    cuisine: string
-    isPopular: boolean
-    rating: number
-}
+import type { Recipe } from '@/types'
 
 interface TagListProps {
     tags: string[]
