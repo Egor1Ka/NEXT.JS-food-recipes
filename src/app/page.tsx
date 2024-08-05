@@ -23,7 +23,7 @@ const HomePage = async ({ searchParams }: { searchParams: { page?: string; tag?:
         <div className="container mx-auto p-4">
             <h1 className="mb-4 text-center text-2xl font-bold">Increasio Recipes</h1>
             <p className="mb-8 text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, laboriosam.</p>
-            <TagList tags={tags || []} recipes={recipesData.recipes || []} activeTag={activeTag} />
+            <TagList tags={tags || []} recipes={recipesData.recipes || []} />
             <Suspense fallback={<Loading />}>
                 <FoodList recipes={recipesData.recipes} />
             </Suspense>
