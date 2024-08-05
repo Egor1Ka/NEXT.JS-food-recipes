@@ -9,6 +9,7 @@ export const getRecipes = async ({ page, tag }: { page: number; tag?: string | n
         skip: String((page - 1) * PAGE_SIZE),
         delay: '1000',
     })
+
     const data = (await fetch(`${API_URL}${tag ? `/tag/${tag}` : ''}?${params.toString()}`).then((res) => res.json())) as ApiResponse<Recipe[]>
     return data
 }
